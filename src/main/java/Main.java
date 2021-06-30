@@ -11,7 +11,7 @@ public class Main {
         ResourceConfig rc = new ResourceConfig()
                 .packages("Controller");
         HttpServer server = JdkHttpServerFactory.createHttpServer(URI.create("http://localhost:8080/"), rc);
-        System.out.println("server started");
+        System.out.println(PrintSuccess());
 
         try {
             System.in.read();
@@ -21,6 +21,9 @@ public class Main {
 
         server.stop(0);
     }public static String GetMessage() {
-        return "hello rot13";
+        return "Starting Server";
+    }
+    public static String PrintSuccess() {
+        return "Server Started";
     }
 }
